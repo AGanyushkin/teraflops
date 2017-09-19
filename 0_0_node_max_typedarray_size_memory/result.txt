@@ -1,0 +1,20 @@
+# ~/Desktop/teraflops/node_max_typedarray_size_memory
+$ ./up.sh
+SIZE = 4GB
+>>> 0 iteration, try allocate 4GB ---
++-- total: 5.42MB, avail: 2.02GB, used: 3.57MB, limit: 2.03GB
+-+- total: 4.92MB, avail: 2.02GB, used: 3.15MB, limit: 2.03GB
+--+ total: 4.92MB, avail: 2.02GB, used: 3.77MB, limit: 2.03GB
+>>> 1 iteration, try allocate 4GB ---
++-- total: 4.92MB, avail: 2.02GB, used: 3.77MB, limit: 2.03GB
+-+- total: 4.92MB, avail: 2.02GB, used: 3.16MB, limit: 2.03GB
+--+ total: 4.92MB, avail: 2.02GB, used: 3.74MB, limit: 2.03GB
+[3228:000000000034AD60] Shrinking page 0000008BDAC80000: end 0000008BDAD00000 -> 0000008BDACD9000
+[3228:000000000034AD60] Shrinking page 0000025F3D100000: end 0000025F3D17F000 -> 0000025F3D10D000
+[3228:000000000034AD60] Shrinking page 000000065DF00000: end 000000065DF80000 -> 000000065DF05000
+[3228:000000000034AD60]       94 ms: Heap growing factor 4.0 based on mu=0.970, speed_ratio=0 (gc=0, mutator=12627)
+[3228:000000000034AD60]       94 ms: Grow: old size: 3093 KB, new limit: 12292 KB (1.1)
+[3228:000000000034AD60]     8290 ms: Heap growing factor 1.1 based on mu=0.970, speed_ratio=11676 (gc=986320, mutator=84)
+[3228:000000000034AD60]     8290 ms: Grow: old size: 3229 KB, new limit: 13435 KB (1.1)
+[3228:000000000034AD60] Memory reducer: call rate 0.001, low alloc, foreground
+[3228:000000000034AD60] Memory reducer: started GC #1

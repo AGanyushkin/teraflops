@@ -1,0 +1,11 @@
+[package]
+name = "gravi"
+version = "0.1.0"
+authors = ["aganyushkin"]
+
+[lib]
+name = "gravi"
+crate-type = ["dylib"]
+
+[dependencies]
+

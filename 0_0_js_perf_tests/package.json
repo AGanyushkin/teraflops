@@ -1,0 +1,40 @@
+{
+  "name": "boilerplate_nodejs",
+  "version": "0.0.1",
+  "description": "Boilerplate Node JS",
+  "engines": {
+    "node": ">=6.9.2"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint -c .eslintrc.json ./src/**/*.js",
+    "check": "npm run lint",
+    "build:dist": "rm -rf build && npm run test && node ./node_modules/babel-cli/bin/babel.js src/app --out-dir build/dist && cp package.json build/dist && cp Dockerfile build/dist",
+    "test": "npm run check && rm -rf coverage && nyc --report-dir=build/coverage --reporter=html --reporter=text -x src/test/**/*.js --include-all-sources cover mocha --reporter spec --colors --compilers js:babel-register src/**/*-spec.js",
+    "test:watch": "mocha --reporter spec --colors --watch --compilers js:babel-register src/**/*-spec.js",
+    "up:src": "nodemon --delay 1 --debug ./node_modules/babel-cli/bin/babel-node.js src/app/luncher.js",
+    "up:bundle": "node --debug luncher.js",
+    "debug:dist": "npm run build:dist && node-debug build/dist/luncher.js"
+  },
+  "author": {
+    "name": "Andrey Ganyushkin",
+    "email": "aganyushkin@hotmail.com",
+    "url": ""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-register": "^6.23.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.15.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "nyc": "^10.1.2"
+  },
+  "dependencies": {
+    "intel": "^1.1.2",
+    "nconf": "^0.8.4",
+    "uuid": "^3.0.1"
+  }
+}

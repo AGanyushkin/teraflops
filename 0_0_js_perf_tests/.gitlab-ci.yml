@@ -1,0 +1,13 @@
+image: node:boron
+cache:
+  paths:
+  - node_modules/
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - npm install
+    - npm test

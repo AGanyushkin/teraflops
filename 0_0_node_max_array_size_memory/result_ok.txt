@@ -1,0 +1,26 @@
+~/Desktop/teraflops/node_max_array_size_memory
+$ ./up.sh
+SIZE = 256MB
+>>> 0 iteration, try allocate 256MB ---
++-- total: 5.42MB, avail: 8.02GB, used: 3.56MB, limit: 8.03GB
+-+- total: 261.43MB, avail: 7.77GB, used: 259.58MB, limit: 8.03GB
+--+ total: 517.95MB, avail: 7.52GB, used: 515.98MB, limit: 8.03GB
+>>> 1 iteration, try allocate 256MB ---
++-- total: 517.95MB, avail: 7.52GB, used: 515.98MB, limit: 8.03GB
+-+- total: 773.96MB, avail: 7.27GB, used: 771.99MB, limit: 8.03GB
+--+ total: 776.46MB, avail: 7.27GB, used: 771.73MB, limit: 8.03GB
+>>> 2 iteration, try allocate 256MB ---
++-- total: 776.46MB, avail: 7.27GB, used: 771.73MB, limit: 8.03GB
+-+- total: 1.01GB, avail: 7.02GB, used: 1GB, limit: 8.03GB
+--+ total: 1.01GB, avail: 7.02GB, used: 1GB, limit: 8.03GB
+>>> 3 iteration, try allocate 256MB ---
++-- total: 1.01GB, avail: 7.02GB, used: 1GB, limit: 8.03GB
+-+- total: 1.26GB, avail: 6.77GB, used: 1.25GB, limit: 8.03GB
+--+ total: 1.26GB, avail: 6.77GB, used: 1.25GB, limit: 8.03GB
+>>> 4 iteration, try allocate 256MB ---
++-- total: 1.26GB, avail: 6.77GB, used: 1.25GB, limit: 8.03GB
+-+- total: 1.51GB, avail: 6.52GB, used: 1.5GB, limit: 8.03GB
+--+ total: 1.51GB, avail: 6.52GB, used: 1.5GB, limit: 8.03GB
+[4092:0000000000360EB0] Shrinking page 000000A24DC00000: end 000000A24DC80000 -> 000000A24DC59000
+[4092:0000000000360EB0] Shrinking page 00000361E6F00000: end 00000361E6F7F000 -> 00000361E6F0D000
+[4092:0000000000360EB0] Shrinking page 000000D682B80000: end 000000D682C00000 -> 000000D682B85000

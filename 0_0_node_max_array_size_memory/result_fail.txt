@@ -1,0 +1,38 @@
+~/Desktop/teraflops/node_max_array_size_memory
+$ ./up.sh
+SIZE = 512MB
+>>> 0 iteration, try allocate 512MB ---
++-- total: 5.42MB, avail: 8.02GB, used: 3.56MB, limit: 8.03GB
+-+- total: 517.43MB, avail: 7.52GB, used: 515.58MB, limit: 8.03GB
+*** total: 517.43MB, avail: 7.52GB, used: 515.59MB, limit: 8.03GB
+FATAL ERROR: invalid array length Allocation failed - JavaScript heap out of memory
+
+
+
+~/Desktop/teraflops/node_max_array_size_memory
+$ ./up.sh
+SIZE = 512MB
+>>> 0 iteration, try allocate 512MB ---
++-- rss: 19.46MB, total: 5.42MB, used: 3.58MB, external: 8.57kB
++-- total: 5.42MB, avail: 8.02GB, used: 3.56MB, limit: 8.03GB
++-->>> size: 2MB, used: 940.66kB, available: 66.34kB, physical: 2MB
++-->>> size: 1.85MB, used: 1.46MB, available: 24B, physical: 1.85MB
++-->>> size: 1.05MB, used: 992.88kB, available: 0B, physical: 1.05MB
++-->>> size: 532kB, used: 228.68kB, available: 0B, physical: 532kB
++-->>> size: 0B, used: 0B, available: 8.02GB, physical: 0B
+-+- rss: 532.56MB, total: 517.43MB, used: 515.61MB, external: 8.57kB
+-+- total: 517.43MB, avail: 7.52GB, used: 515.6MB, limit: 8.03GB
+-+->>> size: 2MB, used: 961.93kB, available: 45.07kB, physical: 2MB
+-+->>> size: 1.85MB, used: 1.47MB, available: 24B, physical: 1.85MB
+-+->>> size: 1.05MB, used: 1003.31kB, available: 0B, physical: 1.05MB
+-+->>> size: 532kB, used: 233.32kB, available: 0B, physical: 532kB
+-+->>> size: 512.01MB, used: 512MB, available: 7.52GB, physical: 512.01MB
+*** rss: 532.58MB, total: 517.43MB, used: 515.63MB, external: 8.57kB
+*** total: 517.43MB, avail: 7.52GB, used: 515.63MB, limit: 8.03GB
+***>>> size: 2MB, used: 979.37kB, available: 27.63kB, physical: 2MB
+***>>> size: 1.85MB, used: 1.47MB, available: 24B, physical: 1.85MB
+***>>> size: 1.05MB, used: 1003.44kB, available: 0B, physical: 1.05MB
+***>>> size: 532kB, used: 234.18kB, available: 0B, physical: 532kB
+***>>> size: 512.01MB, used: 512MB, available: 7.52GB, physical: 512.01MB
+FATAL ERROR: invalid array length Allocation failed - JavaScript heap out of memory
+

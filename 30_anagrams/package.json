@@ -1,0 +1,15 @@
+{
+  "name": "30_anagrams",
+  "version": "1.0.0",
+  "description": "",
+  "main": "try1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "benchmark": "^2.1.4"
+  }
+}

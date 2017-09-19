@@ -1,0 +1,7 @@
+const WS_TA_PORT = 8081
+const WS_ARR_PORT = 8082
+const WS_OBJ_PORT = 8083
+const WS_TA_I32_PORT = 8084
+const WS_TA_I8_PORT = 8085
+const WS_TA_F32_PORT = 8086
+const WS_ARR_INT_PORT = 8087
