@@ -4,7 +4,7 @@ const RK_DEF_H = 1e3 // [c]
 const MAX_ATTEMPTS = 100
 const M_MAX = 3
 const M_MIN = 1
-const POOL_SIZE = 1000
+const POOL_SIZE = 100
 
 function initModel () {
     const EARTH_MOON = 384403e3
