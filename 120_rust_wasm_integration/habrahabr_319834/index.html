@@ -1,0 +1,41 @@
+<html>
+<head>
+    <script>
+        function loadModule(filename) {
+            return fetch(filename)
+                .then(response => response.arrayBuffer())
+                .then(buffer => WebAssembly.compile(buffer))
+                .then(module => {
+                    const imports = {
+                        env: {
+                            memoryBase: 0,
+                            tableBase: 0,
+                            memory: new WebAssembly.Memory({
+                                initial: 256
+                            }),
+                            table: new WebAssembly.Table({
+                                initial: 0,
+                                element: 'anyfunc'
+                            })
+                        }
+                    };
+
+                    return new WebAssembly.Instance(module, imports);
+                });
+        }
+
+        loadModule('fibonacci.wasm').then(instance => {
+            const numToFibo = 40;
+
+            const fiboNative = instance.exports._fibonacci;
+            const fiboNativeRec = instance.exports._fibonacciRec;
+            const fiboNativeMemo = instance.exports._fibonacciMemo;
+
+            console.log(fiboNative(numToFibo));
+            console.log(fiboNativeRec(numToFibo));
+            console.log(fiboNativeMemo(numToFibo));
+
+        });
+    </script>
+</head>
+</html>

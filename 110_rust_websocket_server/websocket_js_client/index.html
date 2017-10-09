@@ -1,0 +1,58 @@
+<html>
+<head>
+    <script>
+
+//        if (ws.readyState == WebSocket.OPEN) {
+//            console.log('Connection is successful');
+//        }
+
+        var socket = new WebSocket("ws://127.0.0.1:10000");
+
+        socket.onopen = function() {
+            console.log("onopen");
+
+            // socket.send("Hello from browser!");
+            let buff = new Float64Array(3);
+            buff[0] = 1.1;
+            buff[1] = 1.2;
+            buff[2] = 1.3;
+            socket.send(buff);
+        };
+
+        socket.onclose = function(event) {
+            if (event.wasClean) {
+                console.log('onclose, was clean');
+            } else {
+                console.log('onclose');
+            }
+            console.log('Code: ' + event.code + ' reason: ' + event.reason);
+        };
+
+        socket.onmessage = function(event) {
+            console.log("data: ");
+            console.log(event.data);
+
+            var arrayBuffer;
+            var fileReader = new FileReader();
+            fileReader.onload = function() {
+                arrayBuffer = this.result;
+
+                let buff = new Float64Array(arrayBuffer);
+                console.log(buff);
+                console.log(buff[0]);
+                console.log(buff[1]);
+                console.log(buff[2]);
+            };
+            fileReader.readAsArrayBuffer(event.data);
+        };
+
+        socket.onerror = function(error) {
+            console.log("Error: " + error.message);
+        };
+
+    </script>
+</head>
+<body>
+<h5>websocket client</h5>
+</body>
+</html>

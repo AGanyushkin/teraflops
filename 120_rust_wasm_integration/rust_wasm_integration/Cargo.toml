@@ -1,0 +1,6 @@
+[package]
+name = "rust_wasm_integration"
+version = "0.1.0"
+authors = ["Andrey Ganyushkin <aganyushki@wiley.com>"]
+
+[dependencies]

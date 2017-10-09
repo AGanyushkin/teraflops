@@ -1,0 +1,4 @@
+[root]
+name = "rust_wasm_integration"
+version = "0.1.0"
+

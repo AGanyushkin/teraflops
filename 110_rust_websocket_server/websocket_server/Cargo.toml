@@ -1,0 +1,9 @@
+[package]
+name = "websocket_server"
+version = "0.1.0"
+authors = ["Andrey Ganyushkin <aganyushki@wiley.com>"]
+
+[dependencies]
+mio-websocket = { git = "https://github.com/nbaksalyar/mio-websocket" }
+env_logger = "0.3"
+byteorder = "1"

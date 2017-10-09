@@ -1,0 +1,7 @@
+[package]
+name = "rust_application"
+version = "0.1.0"
+authors = ["Andrey Ganyushkin <aganyushki@wiley.com>"]
+
+[dependencies]
+rand = "0.3"
