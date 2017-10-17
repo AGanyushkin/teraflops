@@ -1,0 +1,9 @@
+./node_modules/assemblyscript/bin/asc --outFile ./build/out.64.wast --target wasm64 app_try_1.ts
+
+./node_modules/assemblyscript/bin/asc --outFile ./build/out.64.nort.wast --target wasm64 --noRuntime app_try_1.ts
+
+./node_modules/assemblyscript/bin/asc --outFile ./build/out.64.nort.wasm --target wasm64 --noRuntime app_try_1.ts
+
+
+cat ./build/out.64.nort.wasm | xxd
+

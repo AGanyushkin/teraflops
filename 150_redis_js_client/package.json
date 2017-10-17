@@ -1,0 +1,15 @@
+{
+  "name": "21_redis_js_client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "try1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}
